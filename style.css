@@ -24,11 +24,13 @@ body {
     background-color: hsl(0, 0%, 0%, 65%);
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
     list-style-type: none;
     position: fixed;
     top: 0;
     width: 100%;
+    /* border: 1px solid red; */
 }
 
 #main-nav a {
@@ -358,6 +360,7 @@ body {
 }
 
 #mindful {
+    font-size: 3.1rem;
     font-weight: 700;
 }
 
@@ -472,8 +475,49 @@ body {
     outline: none;
 }
 
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40vh;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-top: 2rem;
+}
 
-/* @keyframes confetti {
+#contact > a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact > a:hover {
+    color: rgb(242, 242, 242);
+    font-weight: 500;
+    text-decoration: underline wavy;
+    text-decoration-color: blue;
+}
+
+#copywrite {
+    font-size: 1.8rem;
+    color: rgb(85, 85, 85);
+    padding: 2rem;
+}
+
+#copywrite a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+}
+
+#copywrite a:hover {
+    color: blue;
+    font-weight: 500;
+}
+
+@keyframes confetti {
     0% {
         transform: translateY(-100vh);
     }
@@ -487,4 +531,4 @@ body {
     to {
         background-position: var(--bg-size) 0;
     }
-} */
+}
