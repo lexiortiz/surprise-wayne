@@ -499,6 +499,10 @@ body {
     text-decoration-color: blue;
 }
 
+#number {
+    padding-top: 4px;
+}
+
 #copywrite {
     font-size: 1.8rem;
     color: rgb(85, 85, 85);
