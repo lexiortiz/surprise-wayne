@@ -4,48 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wayne's Surprise Party</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="./sketch.js"></script>
   </head>
   <body>
     <main>
       <section id="hero-section">
         <header id="header">
-            <nav>
-              <ul id="main-nav">
-                <a href="#when-section">
-                  <li>WHEN</li>
-                </a>
-                <a href="#where-section">
-                  <li>WHERE</li>
-                </a>
-                <a href="#remind-section">
-                  <li>DETAILS</li>
-                </a>
-                <a href="#rsvp-section">
-                  <li>RSVP</li>
-                </a>
-                <a href="#footer">
-                  <li>CONTACT</li>
-                </a>
-              </ul>
-            </nav>
-          </header>
-          <section id="hero-text">
-            <h1>You're invited to a <span class="surprise-text boujee-text">SURPRISE PARTY!</span></h1>
-            <p>Join us in celebrating Wayne's <span class="surprise-text">50th</span> Birthday</p>
-          </section>
+          <nav>
+            <ul id="main-nav">
+              <a href="#when-section">
+                <li>WHEN</li>
+              </a>
+              <a href="#where-section">
+                <li>WHERE</li>
+              </a>
+              <a href="#remind-section">
+                <li>DETAILS</li>
+              </a>
+              <a href="#rsvp-section">
+                <li>RSVP</li>
+              </a>
+              <a href="#footer">
+                <li>CONTACT</li>
+              </a>
+            </ul>
+          </nav>
+        </header>
+        <section id="hero-text">
+          <div class="confetti-container">
+            <div class="confetti">
+              <i style="--speed: 10; --bg: yellow" class="square"></i>
+              <i style="--speed: 18; --bg: white" class="pentagram"></i>
+              <i style="--speed: 29; --bg: green" class="rectangle"></i>
+              <i style="--speed: 17; --bg: blue" class="hexagram"></i>
+              <i style="--speed: 33; --bg: red" class="pentagram"></i>
+              <i style="--speed: 26; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 24; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 5; --bg: blue" class="wavy-line"></i>
+              <i style="--speed: 40; --bg: white" class="square"></i>
+              <i style="--speed: 17; --bg: green" class="rectangle"></i>
+              <i style="--speed: 25; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 15; --bg: yellow" class="wavy-line"> </i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 25; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 23; --bg: pink" class="wavy-line"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 37; --bg: pink" class="wavy-line"></i>
+              <i style="--speed: 36; --bg: white" class="hexagram"></i>
+              <i style="--speed: 32; --bg: green" class="wavy-line"></i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 29; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 30; --bg: pink" class="rectangle"></i>
+              <i style="--speed: 30; --bg: red" class="square"></i>
+              <i style="--speed: 18; --bg: red" class="pentagram"></i>
+              <i style="--speed: 19; --bg: green" class="rectangle"></i>
+              <i style="--speed: 16; --bg: blue" class="hexagram"></i>
+              <i style="--speed: 23; --bg: red" class="pentagram"></i>
+              <i style="--speed: 34; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 39; --bg: pink" class="wavy-line"></i>
+              <i style="--speed: 40; --bg: purple" class="square"></i>
+              <i style="--speed: 21; --bg: green" class="rectangle"></i>
+              <i style="--speed: 14; --bg: white" class="square"></i>
+              <i style="--speed: 38; --bg: green" class="rectangle"></i>
+              <i style="--speed: 19; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 29; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 21; --bg: white" class="hexagram"></i>
+              <i style="--speed: 17; --bg: purple" class="wavy-line"></i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 23; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 48; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 38; --bg: pink" class="rectangle"></i>
+              <i style="--speed: 13; --bg: red" class="pentagram"></i>
+              <i style="--speed: 49; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 19; --bg: cyan" class="wavy-line"></i>
+              <i style="--speed: 15; --bg: steelblue" class="square"></i>
+              <i style="--speed: 10; --bg: yellow" class="square"></i>
+              <i style="--speed: 18; --bg: white" class="pentagram"></i>
+              <i style="--speed: 29; --bg: green" class="rectangle"></i>
+              <i style="--speed: 17; --bg: blue" class="hexagram"></i>
+              <i style="--speed: 33; --bg: red" class="pentagram"></i>
+              <i style="--speed: 26; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 24; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 5; --bg: white" class="wavy-line"></i>
+              <i style="--speed: 40; --bg: purple" class="square"></i>
+              <i style="--speed: 17; --bg: green" class="rectangle"></i>
+              <i style="--speed: 25; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 15; --bg: cyan" class="wavy-line"> </i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 45; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 37; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 26; --bg: white" class="hexagram"></i>
+              <i style="--speed: 32; --bg: cyan" class="wavy-line"></i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 45; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 23; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 50; --bg: pink" class="rectangle"></i>
+              <i style="--speed: 30; --bg: red" class="square"></i>
+              <i style="--speed: 18; --bg: red" class="pentagram"></i>
+              <i style="--speed: 19; --bg: green" class="rectangle"></i>
+              <i style="--speed: 16; --bg: blue" class="hexagram"></i>
+              <i style="--speed: 23; --bg: red" class="pentagram"></i>
+              <i style="--speed: 33; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 39; --bg: white" class="wavy-line"></i>
+              <i style="--speed: 40; --bg: orange" class="square"></i>
+              <i style="--speed: 21; --bg: green" class="rectangle"></i>
+              <i style="--speed: 14; --bg: white" class="square"></i>
+              <i style="--speed: 38; --bg: green" class="rectangle"></i>
+              <i style="--speed: 19; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 29; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 34; --bg: white" class="hexagram"></i>
+              <i style="--speed: 17; --bg: indigo" class="wavy-line"></i>
+              <i style="--speed: 32; --bg: yellow" class="pentagram"></i>
+              <i style="--speed: 23; --bg: white" class="square"></i>
+              <i style="--speed: 18; --bg: green" class="rectangle"></i>
+              <i style="--speed: 37; --bg: red" class="dodecagram"></i>
+              <i style="--speed: 48; --bg: pink" class="wavy-line"> </i>
+              <i style="--speed: 38; --bg: pink" class="rectangle"></i>
+              <i style="--speed: 13; --bg: red" class="pentagram"></i>
+              <i style="--speed: 49; --bg: yellow" class="dodecagram"></i>
+              <i style="--speed: 19; --bg: purple" class="wavy-line"></i>
+              <i style="--speed: 15; --bg: cyan" class="square"></i>
+            </div>
+          </div>
+          <!-- <canvas id="confetti"></canvas> -->
+          <h1>
+            You're invited to a
+            <span class="surprise-text boujee-text">SURPRISE PARTY!</span>
+          </h1>
+          <p>
+            Join us in celebrating Wayne's
+            <span class="surprise-text">50th</span> Birthday
+          </p>
+        </section>
       </section>
       <section id="when-section">
         <h2>When</h2>
       </section>
       <section id="where-section"></section>
-      <section id="remind-section"></section>
+      <section id="remind-section">
+        <span>&#129323;</span>
+      </section>
       <section id="rsvp-section"></section>
       <footer id="footer"></footer>
     </main>
