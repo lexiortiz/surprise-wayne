@@ -59,15 +59,8 @@ body {
     background-position: center; */
     font-family: 'Open Sans', sans-serif;
     background-color: black;
-}
-
-/* canvas {
-    overflow-y: hidden;
-    overflow-x: hidden;
     width: 100%;
-    margin: 0;
-    border: 2px solid red;
-} */
+}
 
 #hero-text {
     text-align: center;
@@ -96,7 +89,7 @@ body {
     --bg-size: 400%;
     --color-one: hsl(15 90% 55%);
     --color-two: hsl(40 95% 55%);
-    font-size: clamp(3rem, 25vmin, 8rem);
+    font-size: clamp(3rem, 20vmin, 8rem);
     background: linear-gradient(90deg,
             var(--color-one),
             var(--color-two),
@@ -279,6 +272,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     border: 2rem solid black;
+    width: 100%;
 }
 
 .line {
@@ -287,12 +281,12 @@ body {
 
 #when-text {
     /* padding-top: 8rem; */
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 500;
 }
 
 .date {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 700;
 }
 
@@ -306,6 +300,7 @@ body {
     color: white;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    width: 100%;
 }
 
 #where-text {
@@ -352,6 +347,7 @@ body {
     color: white;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    width: 100%;
 }
 
 #remind-text {
@@ -391,6 +387,7 @@ body {
     font-size: 3rem;
     font-weight: 500;
     padding: 2rem;
+    width: 100%;
 }
 
 .pushable {
@@ -487,6 +484,7 @@ body {
     font-size: 2.4rem;
     font-weight: 400;
     padding-top: 2rem;
+    width: 100%;
 }
 
 #contact > a {
@@ -530,5 +528,103 @@ body {
 @keyframes move-bg {
     to {
         background-position: var(--bg-size) 0;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    main {
+        font-size: 1.4rem;
+    }
+    #hero-section {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    #hero-text {
+        text-align: center;
+        font-size: 2.4rem;
+        padding-top: 6rem;
+    }
+
+    #when-text {
+        font-size: 2.4rem;
+    }
+
+    #where-text {
+        font-size: 3.4rem;
+    }
+
+    .one,
+    .two,
+    .three {
+        font-size: 2.4rem;
+    }
+
+    #remind-text {
+        font-size: 1.8rem;
+    }
+    #remind-list {
+        font-size: 1.8rem;
+    }
+
+    #mindful {
+        font-size: 2.4rem;
+        padding-bottom: 1rem;
+    }
+
+    #dont {
+        font-size: 2.1rem;
+        padding-bottom: 1rem;
+    }
+
+    #rsvp-section {
+        font-size: 2.4rem;
+    }
+
+    #footer {
+        font-size: 2.4rem;
+    }
+
+    #contact {
+        padding: 2rem;
+    }
+
+    #copywrite {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px)  {
+    #hero-section {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-device-width: 1000px) and (max-device-width: 1600px)  {
+    #hero-section {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #hero-text {
+        text-align: center;
+        margin-top: 6rem;
+        padding: 1rem;
+    }
+
+    #remind-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 4rem;
     }
 }
