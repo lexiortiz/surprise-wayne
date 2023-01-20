@@ -14,14 +14,18 @@ html {
 
 body {
     font-size: 1.6rem;
+    overflow: hidden;
 }
 
 #main-nav {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%, 65%);
     display: flex;
     justify-content: center;
     padding: 1rem;
     list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #main-nav a {
@@ -36,6 +40,232 @@ body {
 
 #main-nav li:hover {
     /* background-color: hsl(51, 100%, 50%); */
-    color: hsl(51, 100%, 50%);;
+    color: hsl(223, 89%, 54%);
 }
 
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsRadialGradient1003)'%3e%3c/rect%3e%3cpath d='M0 0L486.02 0L0 42.09z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 42.09L486.02 0L817.8 0L0 198.07z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 198.07L817.8 0L971.9499999999999 0L0 393.36z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 393.36L971.9499999999999 0L1262.1499999999999 0L0 492.78000000000003z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L881.45 560L1440 369.08000000000004z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 369.08000000000004L881.45 560L804.27 560L1440 222.87000000000003z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 222.87L804.27 560L710.77 560L1440 115.16000000000001z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 115.16000000000003L710.77 560L319.65 560L1440 104.30000000000003z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='772.53' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1003'%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='0.87'%3e%3c/stop%3e%3cstop stop-color='rgba(31%2c 31%2c 31%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+
+#hero-text {
+    text-align: center;
+    color: white;
+    font-size: 4.3rem;
+    /* background-color: black; */
+}
+
+#hero-text h1 {
+    font-weight: 400;
+}
+
+#hero-text p {
+    padding-top: 12rem;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.surprise-text {
+    font-weight: 700;
+}
+
+.boujee-text {
+    --bg-size: 400%;
+    --color-one: hsl(15 90% 55%);
+    --color-two: hsl(40 95% 55%);
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+                  90deg,
+                  var(--color-one),
+                  var(--color-two),
+                  var(--color-one)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+  }
+
+
+.confetti-container {
+    user-select: none;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.6;
+}
+
+.confetti {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.confetti .square {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--bg);
+    transform: rotate(140deg);
+}
+
+.confetti .rectangle {
+    width: 1rem;
+    height: 0.5rem;
+    background-color: var(--bg);
+}
+
+.confetti .hexagram {
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 1rem solid var(--bg);
+    position: relative;
+}
+
+.confetti .hexagram:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 1rem solid var(--bg);
+    position: absolute;
+    top: 0.33rem;
+    left: -0.5rem;
+}
+
+.confetti .pentagram {
+    width: 0rem;
+    height: 0rem;
+    display: block;
+    margin: 0.5rem 0;
+    border-right: 1rem solid transparent;
+    border-bottom: 0.7rem solid var(--bg);
+    border-left: 1rem solid transparent;
+    transform: rotate(35deg);
+    position: relative;
+}
+
+.confetti .pentagram:before {
+    border-bottom: 0.8rem solid var(--bg);
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -0.45rem;
+    left: -0.65rem;
+    display: block;
+    content: "";
+    transform: rotate(-35deg);
+}
+
+.confetti .pentagram:after {
+    position: absolute;
+    display: block;
+    color: var(--bg);
+    top: 0.03rem;
+    left: -1.05rem;
+    width: 0rem;
+    height: 0rem;
+    border-right: 1rem solid transparent;
+    border-bottom: 0.7rem solid var(--bg);
+    border-left: 1rem solid transparent;
+    transform: rotate(-70deg);
+    content: "";
+}
+
+.confetti .dodecagram {
+    background: var(--bg);
+    width: 8px;
+    height: 8px;
+    position: relative;
+}
+
+.confetti .dodecagram:before {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: var(--bg);
+    transform: rotate(30deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.confetti .dodecagram:after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: var(--bg);
+    transform: rotate(60deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.confetti .wavy-line {
+    position: relative;
+}
+
+.confetti .wavy-line::after,
+.confetti .wavy-line::before {
+    content: "";
+    height: 10px;
+    width: 80px;
+    background-size: 20px 10px;
+    position: absolute;
+    left: -9rem;
+    transform: rotate(90deg);
+}
+
+.confetti .wavy-line::before {
+    background-image: linear-gradient(45deg,
+            transparent,
+            transparent 50%,
+            var(--bg) 50%,
+            transparent 60%);
+    top: 1rem;
+}
+
+.confetti .wavy-line::after {
+    background-image: linear-gradient(-45deg,
+            transparent,
+            transparent 50%,
+            var(--bg) 50%,
+            transparent 60%);
+}
+
+.confetti i {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.2rem;
+    animation-name: confetti;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: calc(60s / var(--speed));
+}
+
+.confetti i:nth-child(even) {
+    transform: rotate(90deg);
+}
+
+@keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+
+@keyframes confetti {
+    0% {
+        transform: translateY(-90vh);
+    }
+    
