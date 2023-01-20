@@ -322,6 +322,13 @@ body {
     text-decoration: none;
 }
 
+.where-info {
+    padding: 6rem 2rem;
+    padding-bottom: 0;
+    font-size: 2.6rem;
+    color: rgb(237, 237, 237);
+}
+
 .one:hover {
     color: green;
     cursor: pointer;
@@ -607,6 +614,16 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #mindful {
+        font-size: 2.4rem;
+        padding-bottom: 2rem;
+    }
+
+    #dont {
+        font-size: 2.1rem;
+        padding-bottom: 1rem;
     }
 
 }
