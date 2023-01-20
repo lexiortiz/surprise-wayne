@@ -1,20 +1,41 @@
 /* 
-
 font-family: 'Open Sans', sans-serif;
 font-family: 'Source Serif Pro', serif;
-
 */
-
 * {
     box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-  }
-  
-  html {
-      font-size: 62.5%;
-  }
-  
-  body {
-      font-size: 1.6rem;
-  }
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#main-nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    list-style-type: none;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#main-nav li {
+    padding: 1rem;
+    text-align: center;
+}
+
+#main-nav li:hover {
+    /* background-color: hsl(51, 100%, 50%); */
+    color: hsl(51, 100%, 50%);;
+}
+
