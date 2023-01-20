@@ -105,13 +105,6 @@ body {
     animation: move-bg 8s infinite linear;
 }
 
-#when-section {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
-    min-height: 100vh;
-}
-
 .confetti {
     position: fixed;
     left: 0;
@@ -272,7 +265,215 @@ body {
     transform: rotate(90deg);
 }
 
-@keyframes confetti {
+
+#when-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    /* background-color: rgb(8, 8, 8); */
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border: 2rem solid black;
+}
+
+.line {
+    border-bottom: 1px solid white;
+}
+
+#when-text {
+    /* padding-top: 8rem; */
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+#where-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    /* background-color: rgb(8, 8, 8); */
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+#where-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.location {
+    font-weight: 600;
+    padding-bottom: 4rem;
+}
+
+#where-text>a {
+    padding: 0.5rem;
+    font-size: 3.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+.one:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.two:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.three:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#remind-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    background-color: rgb(4, 4, 4);
+    border: 3rem solid black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+#remind-text {
+    font-size: 2.6rem;
+    padding: 1rem;
+}
+
+#mindful {
+    font-weight: 700;
+}
+
+#dont {
+    font-size: 3.1rem;
+}
+
+#remind-list {
+    padding: 1rem;
+    list-style-type: none;
+    font-size: 2.6rem;
+    /* margin-top: -40px; */
+}
+
+#remind-list li {
+    padding: 1rem;
+}
+
+#rsvp-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 40vh;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+.pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left,
+            rgb(0, 82, 21) 0%,
+            rgb(5, 134, 52) 8%,
+            rgb(0, 163, 62) 92%,
+            rgb(0, 82, 36) 100%);
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 2.4rem;
+    color: white;
+    background: rgb(4, 158, 11);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover {
+    filter: brightness(110%);
+}
+
+.pushable:hover .front {
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+    transform: translateY(4px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* @keyframes confetti {
     0% {
         transform: translateY(-100vh);
     }
@@ -286,4 +487,4 @@ body {
     to {
         background-position: var(--bg-size) 0;
     }
-}
+} */
