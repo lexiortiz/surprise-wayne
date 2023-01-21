@@ -72,10 +72,15 @@ body {
 
 #hero-text h1 {
     font-weight: 400;
+    /* margin-top: 10rem; */
 }
 
+/* #image-div {
+    margin-top: 12rem;
+} */
+
 #hero-text p {
-    /* padding-top: 12rem; */
+    /* margin: 6rem 0; */
     /* font-family: 'Source Serif Pro', serif; */
     padding: 1rem;
 }
@@ -83,8 +88,9 @@ body {
 .hero-image {
     clip-path: ellipse(50% 40% at 50% 50%);
     max-width: 100%;
-    width: 250px;
+    width: 325px;
     /* margin-top: 0.5rem; */
+    filter: brightness(0.98);
 }
 
 .surprise-text {
@@ -648,6 +654,10 @@ body {
         text-align: center;
         margin-top: 6rem;
         padding: 1rem;
+    }
+
+    #hero-text p {
+        padding: 0 1rem;
     }
 
     #remind-section {
