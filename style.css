@@ -77,6 +77,7 @@ body {
 #hero-text p {
     /* padding-top: 12rem; */
     /* font-family: 'Source Serif Pro', serif; */
+    padding: 1rem;
 }
 
 .hero-image {
