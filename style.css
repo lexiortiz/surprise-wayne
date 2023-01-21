@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     min-height: 100vh;
-    /* background-image: url("");
+    /* background-image: url("https://i.ibb.co/SVK6S5M/wayne.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
@@ -76,7 +76,7 @@ body {
 }
 
 #hero-text p {
-    padding-top: 12rem;
+    /* padding-top: 12rem; */
     /* font-family: 'Source Serif Pro', serif; */
 }
 
@@ -98,6 +98,13 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     animation: move-bg 8s infinite linear;
+}
+
+.hero-image {
+    clip-path: ellipse(50% 40% at 50% 50%);
+    max-width: 100%;
+    width: 300px;
+    /* margin-top: 0.5rem; */
 }
 
 .confetti {
